@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimos - Dim Dim</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+</head>
+<body>
+    <div class="topo">
+        <h1>DimDim</h1>
+    </div>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="Cadastro.html">Cadastro</a>
+        <a href="Login.html">Login</a>
+        <a href="conta.html">Conta Corrente</a>
+        <a href="cartoes.html">Cartões</a>
+        <a href="emprestimos.html">Empréstimos</a>
+        <a href="investimentos.html">Investimentos</a>
+        <a href="suporte.html">Suporte</a>
+    </div>
+    <div class="caixa">
+        <h1>Empréstimos</h1>
+        <p>Veja nossas opções de empréstimo e solicite o seu agora mesmo!</p>
+        
+        <div class="section saldo">
+            <h2>Saldo</h2>
+            <p class="saldo-valor"><span class="saldo-border">R$ <span id="saldo">5,000.00</span></span></p>
+        </div>
+        
+        <div class="section extrato">
+            <h2>Extrato</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Saldo</th>
+                    </tr>
+                </thead>
+                <tbody id="extrato">
+                    <tr>
+                        <td>25/05/2024</td>
+                        <td>Depósito</td>
+                        <td>R$ 1,000.00</td>
+                        <td>R$ 5,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>24/05/2024</td>
+                        <td>Pagamento de Conta</td>
+                        <td>-R$ 150.00</td>
+                        <td>R$ 4,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>23/05/2024</td>
+                        <td>Compra no Supermercado</td>
+                        <td>-R$ 200.00</td>
+                        <td>R$ 4,150.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        
+        <h2>Solicitar Empréstimo</h2>
+        <form action="solicitar_emprestimo.php" method="post">
+            <label for="tipo_emprestimo">Tipo de Empréstimo:</label>
+            <select name="tipo_emprestimo" id="tipo_emprestimo">
+                <option value="pessoal">Empréstimo Pessoal</option>
+                <option value="garantia">Empréstimo com Garantia</option>
+                <option value="empresas">Empréstimo para Empresas</option>
+            </select>
+            <label for="valor_emprestimo">Valor do Empréstimo:</label>
+            <input type="number" name="valor_emprestimo" id="valor_emprestimo" required>
+            <label for="prazo_emprestimo">Prazo (Meses):</label>
+            <input type="number" name="prazo_emprestimo" id="prazo_emprestimo" required>
+            <button type="submit">Solicitar</button>
+        </form>
+    </div>
+    <footer class="footer">
+        &copy; 2024 Dim Dim. Todos os direitos reservados.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+:root{
+    --corPrincipal: #FFDE59; /* cria uma variável pra facilitar a vida */
+}
+
+body{
+    background-color: #EAEACC;
+}
+header{
+    background-color: var(--corPrincipal);
+    padding: 10px 0 10px 0;
+}
+header table{
+    margin: 0 auto 0 auto;
+}
+header table tr{
+    vertical-align:top;
+}
+h2{
+    margin-top: 50%;
+}
+.imagemLateral img{
+    width: 55%;
+    opacity: 90%;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+form{
+    margin: 1px;
+    width: 34%;
+    position: absolute;
+    left: 65%;
+}
+input{
+    width:300px;
+}
+.campo{
+    padding: 3px 0 3px 0;
+}
+.nome{
+    width:148px;
+}
+.card{
+    width: 18rem;
+    border-radius: 15px;
+    margin-top:10%;
+}
+.card img{
+    border-radius: 15px;
+}

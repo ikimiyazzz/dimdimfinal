@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investimentos - Dim Dim</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+</head>
+<body>
+    <div class="topo">
+        <h1>DimDim</h1>
+    </div>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="Cadastro.html">Cadastro</a>
+        <a href="Login.html">Login</a>
+        <a href="conta.html">Conta Corrente</a>
+        <a href="cartoes.html">Cartões</a>
+        <a href="emprestimos.html">Empréstimos</a>
+        <a href="investimentos.html">Investimentos</a>
+        <a href="suporte.html">Suporte</a>
+    </div>
+    <div class="container">
+        <div class="caixa">
+            <h1>Investimentos</h1>
+            <p>Explore nossas opções de investimentos.</p>
+        
+        <div class="section produtos-investimento">
+            <h2>Nossos Produtos de Investimento</h2>
+            <div class="produto">
+                <h3>Tesouro Direto:</h3>
+                <p>O Tesouro Direto é uma opção de investimento em títulos públicos. Simplificando, ao adquirir um título, os investidores concedem um empréstimo 
+                    ao Tesouro Nacional e, em contrapartida, recebem juros. Os títulos do Tesouro Direto são classificados como renda fixa, 
+                    garantindo uma rentabilidade pré-determinada.</p>
+            </div>
+            <div class="produto">
+                <h3>CDB:</h3>
+                <p>CDB, ou Certificado de Depósito Bancário, é um tipo de título de renda fixa emitido por instituições bancárias com o objetivo de angariar 
+                    recursos. Na prática, ao investir em um CDB, você está emprestando dinheiro ao banco e, em troca, ele remunera você com juros ao 
+                    término do período acordado.</p>
+            </div>
+            <div class="produto">
+                <h3>Fundos de Investimento: </h3>
+                <p>Um Fundo de Investimento é um mecanismo no qual recursos financeiros são agregados em um condomínio, com o propósito de serem aplicados 
+                    em diversos ativos do mercado financeiro. Essencialmente, trata-se de uma estrutura que possibilita a coleta de investimentos de 
+                    diversos participantes, os quais são direcionados conjuntamente para aplicações financeiras.</p>
+            </div>
+        </div>
+        <div class="section desempenho">
+            <h2>Desempenho dos Investimentos</h2>
+            <canvas id="graficoDesempenho"></canvas>
+        </div>
+        <div class="section analise-risco">
+            <h2>Análise de Risco</h2>
+            <table>
+                <tr>
+                    <th>Produto</th>
+                    <th>Risco</th>
+                    <th>Rentabilidade</th>
+                </tr>
+                <tr>
+                    <td>Tesouro Direto</td>
+                    <td>Baixo</td>
+                    <td>6% a.a.</td>
+                </tr>
+                <tr>
+                    <td>CDB</td>
+                    <td>Médio</td>
+                    <td>8% a.a.</td>
+                </tr>
+                <tr>
+                    <td>Fundos de Investimento</td>
+                    <td>Alto</td>
+                    <td>10% a.a.</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; 2024 Dim Dim. Todos os direitos reservados.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('graficoDesempenho').getContext('2d');
+        const graficoDesempenho = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                datasets: [{
+                    label: 'Desempenho',
+                    data: [10, 12, 8, 15, 18, 20, 17, 22, 25, 28, 30, 35],
+                    borderColor: 'rgba(0, 0, 0, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Mês'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Rentabilidade (%)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
